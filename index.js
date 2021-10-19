@@ -186,29 +186,55 @@
 // Ayuda: para saber si algo es un string en javascript, podés usar typeof ver más
 // Mostrar el array resultante
 
-const mix = [
-	"Ut vero.",
-	2,
-	function () {
-		console.log("hola mundo!");
-	},
-	56,
-	"Diam rebum nonumy et.",
-	true,
-	false,
-	"Kasd stet.",
-	"Sit et dolor.",
-	null,
-	null,
-	[1, 2, 3],
-	"Dolore.",
-];
+// const mix = [
+// 	"Ut vero.",
+// 	2,
+// 	function () {
+// 		console.log("hola mundo!");
+// 	},
+// 	56,
+// 	"Diam rebum nonumy et.",
+// 	true,
+// 	false,
+// 	"Kasd stet.",
+// 	"Sit et dolor.",
+// 	null,
+// 	null,
+// 	[1, 2, 3],
+// 	"Dolore.",
+// ];
 
 // codear acá la solución del ejercicio
-const soloStrings = mix.filter((elemento) => {
-	return typeof elemento == "string";
-});
+// const soloStrings = mix.filter((elemento) => {
+// 	return typeof elemento == "string";
+// });
 
-console.log(soloStrings);
+// console.log(soloStrings);
 // deberia mostrar
 // [ 'Ut vero.', 'Diam rebum nonumy et.', 'Kasd stet.', 'Sit et dolor.', 'Dolore.' ]
+
+//4 Tenemos un array playlist con canciones seleccionadas al azar por spotify para reproducir.
+// Tenemos otro array playlistEscuchada que tiene canciones que ya escuchamos anteriormente.
+// Usando filter, queremos crear una nueva lista que solo contenga aquellas canciones guardadas en playlist que no están en playlistEscuchada
+// Guarda el resultado en la variable playlistSinEscuchar
+const playlist = [
+	"Smells Like Teen Spirit",
+	"Everlong",
+	"Come As You Are",
+	"The Pretender",
+	"Heart-Shaped Box",
+	"Learn to Fly",
+	"Lithium",
+];
+var playlistEscuchada = ["The Pretender", "Lithium", "Come As You Are"];
+
+/// codea aca tu solución
+const playlistSinEscuchar = playlist.filter((elemento) => {
+	if (!playlistEscuchada.includes(elemento)) {
+		return elemento;
+	}
+});
+
+console.log(playlistSinEscuchar);
+// deberia mostrar
+// [ 'Smells Like Teen Spirit', 'Everlong', 'Heart-Shaped Box', 'Learn to Fly' ]
