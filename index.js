@@ -181,4 +181,34 @@
 // pares: [18, 46, 44, 42, 0, 40, 10, 38, 34, 40, 4, 32]
 // impares: [43, 11, 37, 29, 9, 3, 37, 25]
 
-//3
+//3  Tenemos un array en una variable mix con varios elementos, de distintos tipos de datos.
+// Usando filter, crear un nuevo array con todos los elementos que sean strings y guardalo en la variable soloStrings.
+// Ayuda: para saber si algo es un string en javascript, podés usar typeof ver más
+// Mostrar el array resultante
+
+const mix = [
+	"Ut vero.",
+	2,
+	function () {
+		console.log("hola mundo!");
+	},
+	56,
+	"Diam rebum nonumy et.",
+	true,
+	false,
+	"Kasd stet.",
+	"Sit et dolor.",
+	null,
+	null,
+	[1, 2, 3],
+	"Dolore.",
+];
+
+// codear acá la solución del ejercicio
+const soloStrings = mix.filter((elemento) => {
+	return typeof elemento == "string";
+});
+
+console.log(soloStrings);
+// deberia mostrar
+// [ 'Ut vero.', 'Diam rebum nonumy et.', 'Kasd stet.', 'Sit et dolor.', 'Dolore.' ]
