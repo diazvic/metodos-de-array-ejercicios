@@ -230,9 +230,7 @@ var playlistEscuchada = ["The Pretender", "Lithium", "Come As You Are"];
 
 /// codea aca tu solución
 const playlistSinEscuchar = playlist.filter((elemento) => {
-	if (!playlistEscuchada.includes(elemento)) {
-		return elemento;
-	}
+	return !playlistEscuchada.includes(elemento);
 });
 
 console.log(playlistSinEscuchar);
